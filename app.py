@@ -32,7 +32,7 @@ def __main__():
     #st.write(locations_list)
     
     loc = st.selectbox("Enter the location:",locations_list) 
-    sqft = st.number_input("Enter the area (in sq.ft): ", min_value = 100, max_value = 6000)
+    sqft = st.number_input("Enter the area (in sq.ft): ", min_value = 100, max_value = 12000)
     sqft = float(sqft)
     bath = st.slider("Number of bathrooms: ", 1, 10)
     bath = float(bath)
