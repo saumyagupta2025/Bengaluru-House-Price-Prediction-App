@@ -43,6 +43,7 @@ def __main__():
         pred = round(pred,2)
         output = "The estimated price of the property is " + str(pred) +  " Lakh"
         st.warning(output)
+        st.success(output)
 
 
 
