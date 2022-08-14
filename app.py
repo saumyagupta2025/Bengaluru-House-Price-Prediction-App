@@ -25,7 +25,7 @@ def predict_price(location,sqft,bath,bhk):
 def __main__():
     st.title("Bengaluru House Price Prediction")
     st.write("")
-    st.image("02C.jpeg", width = 1700)
+    st.image("02C.jpeg", width = 1000)
     #st.write(locations_list)
     
     loc = st.selectbox("Enter the location:",locations_list) 
