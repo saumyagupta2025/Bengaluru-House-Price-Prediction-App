@@ -2,15 +2,10 @@ import pandas as pd
 import numpy as np
 import pickle
 import streamlit as st
-import requests
-from streamlit_option_menu import option_menu
-from PIL import Image
-import sys 
-import os
 import json
 
-model = pickle.load(open("/Users/saumyagupta/Desktop/Personal/Development/Bengaluru_House_Price_Prediction/banglore_home_prices_model.pickle", "rb"))
-locations = json.load(open("/Users/saumyagupta/Desktop/Personal/Development/Bengaluru_House_Price_Prediction/columns.json"))
+model = pickle.load(open("banglore_home_prices_model.pickle", "rb"))
+locations = json.load(open("columns.json"))
 X = locations['data_columns']
 locations_list = X[3:]
 
@@ -30,7 +25,7 @@ def predict_price(location,sqft,bath,bhk):
 def __main__():
     st.title("Bengaluru House Price Prediction")
     st.write("")
-    st.image("/Users/saumyagupta/Desktop/Personal/Development/Bengaluru_House_Price_Prediction/02C.jpeg", width = 700)
+    st.image("02C.jpeg", width = 700)
     #st.write(locations_list)
     
     loc = st.selectbox("Enter the location:",locations_list) 
