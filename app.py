@@ -4,6 +4,9 @@ import pickle
 import streamlit as st
 import json
 
+
+
+
 model = pickle.load(open("banglore_home_prices_model.pickle", "rb"))
 locations = json.load(open("columns.json"))
 X = locations['data_columns']
